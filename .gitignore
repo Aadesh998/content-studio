@@ -1,0 +1,30 @@
+# ---- secrets (never commit) ----
+.env
+maya_ssh
+*.pem
+*.key
+.claude/settings.local.json
+
+# ---- workspace data: client products, creator faces, generated videos ----
+# (folders are kept with .gitkeep; contents stay on your machine)
+products/*
+!products/.gitkeep
+creators/*
+!creators/.gitkeep
+runs/*
+!runs/.gitkeep
+
+# ---- generated retries / scratch ----
+**/*_try*.png
+**/*_try*.jpg
+**/*_try*.jpeg
+**/*_try*.webp
+
+# ---- third-party reference material (keep locally) ----
+docs/*.pdf
+
+# ---- python / OS ----
+__pycache__/
+*.pyc
+.DS_Store
+*.swp
